@@ -22,6 +22,7 @@ body:
     id: description
     attributes:
       label: Описание
+      name: "Bug report"
       description: Кратко опишите суть проблемы. Что происходит и где?
       placeholder: Например: «При нажатии кнопки „Сохранить“ страница зависает»
       validations:
