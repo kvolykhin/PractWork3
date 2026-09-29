@@ -1,14 +1,12 @@
-name: название шаблона 
-description: описание шаблона 
-title: "[Ошибка]: " 
+name: Bug Report
+description: Шаблон для отчётов об ошибках
+title: "[Ошибка]: "
 labels: ["bug"]
-
 body:
   - type: markdown
     attributes:
       value: |
         Спасибо, что помогаете улучшать проект! Перед отправкой отчёта обязательно проверьте, нет ли уже похожего дефекта в Issues.
-  
   - type: checkboxes
     id: existing-check
     attributes:
@@ -17,7 +15,6 @@ body:
       options:
         - label: Я проверил(а) существующие отчёты о дефектах и не нашёл(а) дубликата
           required: true
-
   - type: textarea
     id: description
     attributes:
@@ -26,7 +23,6 @@ body:
       placeholder: Например: «При нажатии кнопки „Сохранить“ страница зависает»
       validations:
         required: true
-
   - type: textarea
     id: preconditions
     attributes:
@@ -35,7 +31,6 @@ body:
       placeholder: Например: «Пользователь авторизован, открыт раздел „Профиль“»
       validations:
         required: true
-
   - type: textarea
     id: steps
     attributes:
@@ -48,7 +43,6 @@ body:
         4. Нажать «Сохранить»
       validations:
         required: true
-
   - type: textarea
     id: expected
     attributes:
@@ -57,7 +51,6 @@ body:
       placeholder: «Должно появиться сообщение об ошибке: „Пароль должен содержать не менее 6 символов“»
       validations:
         required: true
-
   - type: textarea
     id: actual
     attributes:
@@ -66,33 +59,30 @@ body:
       placeholder: «Ничего не происходит, кнопка неактивна, ошибок нет»
       validations:
         required: true
-
   - type: dropdown
     id: priority
     attributes:
       label: Приоритет
       description: Насколько срочно нужно исправить дефект?
       options:
-        - Критический (блокирует работу основной функциональности)
-        - Высокий (серьёзно мешает работе, но есть обходные пути)
-        - Средний (заметен, но не сильно мешает)
-        - Низкий (косметический или редкий случай)
+        - "Критический (блокирует работу основной функциональности)"
+        - "Высокий (серьёзно мешает работе, но есть обходные пути)"
+        - "Средний (заметен, но не сильно мешает)"
+        - "Низкий (косметический или редкий случай)"
       validations:
         required: true
-
   - type: dropdown
     id: severity
     attributes:
       label: Серьёзность
       description: Какое влияние дефект оказывает на пользователя/систему?
       options:
-        - Блокирующий (полностью невозможно использовать функционал)
-        - Критический (серьёзные искажения данных/ошибки)
-        - Значительный (некорректная работа части функционала)
-        - Незначительный (мелкие недочёты, опечатки)
+        - "Блокирующий (полностью невозможно использовать функционал)"
+        - "Критический (серьёзные искажения данных/ошибки)"
+        - "Значительный (некорректная работа части функционала)"
+        - "Незначительный (мелкие недочёты, опечатки)"
       validations:
         required: true
-
   - type: textarea
     id: attachments
     attributes:
